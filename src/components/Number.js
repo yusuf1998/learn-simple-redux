@@ -6,7 +6,7 @@ const Number = ({ number }) => {
 };
 
 const mapStateToProps = store => ({
-  Number: store.counter.number
+  number: store.counter.number
 });
 
 export default connect(mapStateToProps)(Number);
