@@ -1,12 +1,17 @@
 import React from "react";
+import { connect } from "react-redux";
+import { increaseNumber, decreaseNumber } from "../store/actions/counter";
 
-const Counter = () => {
+const Counter = ({ increaseNumber, decreaseNumber }) => {
   return (
     <div>
-      <button>+</button>
-      <button>-</button>
+      <button onClick={increaseNumber}>+</button>
+      <button onClick={decreaseNumber}>-</button>
     </div>
   );
 };
 
-export default Counter;
+export default connect(
+  null,
+  { increaseNumber, decreaseNumber }
+)(Counter);
