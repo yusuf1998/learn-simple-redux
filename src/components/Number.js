@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const Number = () => {
-  return <h1>0</h1>;
+const Number = ({ number }) => {
+  return <h1>{number}</h1>;
 };
 
 const mapStateToProps = store => ({
-  Number: store.counter
+  Number: store.counter.number
 });
 
-export default connect()(Number);
+export default connect(mapStateToProps)(Number);
